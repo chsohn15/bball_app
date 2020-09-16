@@ -6,16 +6,20 @@ export default class PlayersDisplay extends React.Component {
       super();
   
     }
-  
+    makePlayerCards = () => {
+
+        return this.props.displayedPlayers.map(player => <PlayerCard player={player} addToTeam={this.props.addToTeam}/>)
+    }
+    
     render(){
         return(
           <div>
-              <PlayerCard />
-            
+              <h1 style={{color:"red"}}>Selected Basketball Players</h1>
+                {this.makePlayerCards()}
           </div>
   
         )
   
     }
+}
   
-  }

@@ -1,6 +1,4 @@
-
 import React from 'react'
-
 
 
 export default class PlayerCard extends React.Component {
@@ -13,14 +11,16 @@ export default class PlayerCard extends React.Component {
         return(
           <div>
 
-             <h1> Player Name: </h1>
+             <h5> Player Name: {this.props.player.first_name} {this.props.player.last_name}</h5>
              
-             <h1> Team:  </h1>
+             <h5> Team: {this.props.player.team.full_name} </h5>
              
-             <h1> Position:  </h1>
+             <h5> Position: {this.props.player.position} </h5>
              
-             <h1> Salary:  </h1>
+             <h5> Conference: {this.props.player.team.conference} </h5>
 
+             <button onClick={() => this.props.addToTeam(this.props.player)}>Add to My Team</button><br></br>
+            __________________________________________________________________
           </div>
   
         )
