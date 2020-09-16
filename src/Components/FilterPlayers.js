@@ -10,7 +10,8 @@ export default class FilterPlayers extends React.Component {
   render(){
       return(
         <div>
-            <select>
+            <select onChange ={(e) => this.props.filterPlayers(e)} >
+              
                 <option value="all">All</option>
                 <option value="C">Center</option>
                 <option value="G">Guard</option>
